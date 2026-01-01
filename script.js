@@ -11,7 +11,19 @@ function clearDisplay() {
 function calculate() {
     try {
         display.value = eval(display.value);
-    } catch (error) {
+    } catch {
         display.value = "Error";
+    }
+}
+
+function square() {
+    if (display.value !== "") {
+        display.value = Math.pow(display.value, 2);
+    }
+}
+
+function sqrt() {
+    if (display.value !== "") {
+        display.value = Math.sqrt(display.value);
     }
 }
